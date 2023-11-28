@@ -40,11 +40,8 @@
                                     {{ film.genre }}
                                 </div>
                             </div>
-
-                            <div style="z-index: 4; position: absolute">
-                                <img style="width: 80px" src="/assets/icons/play-icon2.png" alt="img" >
-                            </div>
                         </div>
+                        <img class="film_play" src="/assets/icons/play-icon2.png" alt="img">
                     </slide>
 
                     <template #addons>
@@ -75,6 +72,7 @@
                                 </div>
                             </div>
                         </div>
+                        <img class="film_play" src="/assets/icons/play-icon2.png" alt="img">
                     </slide>
 
                     <template #addons>
@@ -84,7 +82,7 @@
                 </carousel>
             </div>
         </div>
-        <div class="block_content block_next">
+       <div class="block_content block_next">
             <div class="title_content">
                 <div class="title">Сериалы ›</div>
             </div>
@@ -104,6 +102,7 @@
                                 </div>
                             </div>
                         </div>
+                        <img class="film_play" src="/assets/icons/play-icon2.png" alt="img">
                     </slide>
 
                     <template #addons>
@@ -111,6 +110,21 @@
                         <pagination />
                     </template>
                 </carousel>
+            </div>
+        </div>
+        <div class="block_content block_next">
+            <div class="title_content">
+                <div class="title">О сайте ›</div>
+            </div>
+            <div class="desc_content">
+                    На нашем сайте вы найдете широкий выбор фильмов различных жанров, включая драмы, комедии, фантастику, ужасы и многое другое. У нас есть как классические киноленты, так и новинки, которые только вышли на большие экраны. <br />
+                    <br />
+                    Вы можете использовать наш удобный поиск, чтобы найти фильмы по названию, актерам, режиссерам или ключевым словам. Кроме того, мы предоставляем подробную информацию о каждом фильме, включая описание сюжета, трейлеры, рейтинги, отзывы пользователей и многое другое. <br />
+                    <br />
+                    Если вы зарегистрируетесь на нашем сайте, вы сможете создавать свой список любимых фильмов, оставлять свои оценки и отзывы, а также обмениваться рекомендациями с другими пользователями. Мы также предлагаем персонализированные рекомендации на основе ваших предпочтений и просмотренных фильмов.
+                    Мы постоянно обновляем нашу коллекцию фильмов, чтобы вы всегда могли найти что-то интересное для просмотра. Также не забудьте следить за нашими новостями и акциями, чтобы быть в курсе последних событий в мире кино. <br />
+                    <br />
+                    Мы надеемся, что наш сайт станет вашим надежным проводником в мире кино и поможет вам насладиться просмотром ваших любимых фильмов. Приятного просмотра!<br />
             </div>
         </div>
     </div>
@@ -208,7 +222,6 @@ export default {
     cursor: pointer;
     width: 100%;
     font-size: 20px;
-    background: url('https://the-flow.ru/uploads/images/resize/830x0/adaptiveResize/01/31/11/42/29/3291cff40cd7.jpg') no-repeat;
     background-size: 100%;
     display: flex;
     justify-content: center;
@@ -217,9 +230,6 @@ export default {
     box-shadow: inset 0 -47px 55px 0 rgba(0,0,0,0.9);
 }
 
-.film_content .carousel__item:hover {
-    filter: blur(4px);
-}
 
 .film_content .carousel__slide {
     padding: 0 5px;

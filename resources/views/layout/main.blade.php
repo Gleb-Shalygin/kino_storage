@@ -28,7 +28,7 @@
             <header-component></header-component>
         </header>
         <main class="main">@yield('content')</main>
-        <footer class="footer">Я футер</footer>
+        <footer class="footer"><footer-component></footer-component></footer>
     </div>
 </div>
 </body>

@@ -8,13 +8,14 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import TestComponent from "./TestComponent.vue";
 import HomeComponent from "./home/HomeComponent.vue";
 import HeaderComponent from "./home/layout/HeaderComponent.vue";
-
+import FooterComponent from "./home/layout/FooterComponent.vue";
 
 const app = createApp({
     components: {
         TestComponent,
         HomeComponent,
-        HeaderComponent
+        HeaderComponent,
+        FooterComponent
     }
 });
 
