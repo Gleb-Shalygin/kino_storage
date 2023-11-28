@@ -45,7 +45,7 @@
 }
 
 .film_content .carousel__slide:hover .carousel__item {
-    filter: blur(4px);
+    filter: blur(10px);
 }
 
 .film_content .carousel__slide:hover .film_play {
