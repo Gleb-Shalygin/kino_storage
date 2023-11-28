@@ -1,11 +1,11 @@
 <template>
-
-    <h1>тест компонент</h1>
+    <div>
+        <p>WATCH DOGS</p>
+    </div>
 </template>
 
 <script>
 
 </script>
-<style scoped>
-
+<style>
 </style>

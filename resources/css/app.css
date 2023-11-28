@@ -1,0 +1,266 @@
+@import "slider.css";
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header {
+    background-color: #0c1013;
+    box-shadow: 0 0 19px 2px rgba(0,0,0,.91);
+    position: relative;
+    z-index: 100;
+}
+
+.main {
+    background-color: #1D1D1D;
+    padding: 30px;
+    flex: 1 1 auto;
+}
+
+.footer {
+    background-color: #77608d;
+    padding: 30px;
+    text-align: center;
+}
+
+
+/* Кнопка выпадающего списка */
+.dropbtn {
+    color: white;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+    margin: 0 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.antialiased .el-popper.is-light {
+    border: none;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1D1D1D;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #1D1D1D;}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {color: #a0aec0;}
+
+
+.header_search .el-input__wrapper.is-focus {
+    box-shadow: 0 0 0 1px #1D1D1D inset;
+}
+
+
+#el-popper-container-599 .el-popper {
+    border: none;
+}
+
+
+
+.header_search .el-input__wrapper {
+    cursor: pointer;
+    background-color: #0c1013;
+    border-radius: 0;
+    box-shadow: 0 0 0 1px #1D1D1D inset;
+}
+
+.header_search .el-input__wrapper:hover {
+    box-shadow: 0 0 19px 2px #1D1D1D;
+}
+
+.header_menu {
+    margin: 4px 0 0 150px;
+}
+
+.header_menu .el-menu--horizontal.el-menu {
+    border-bottom: none;
+}
+
+.header_menu .el-menu--horizontal>.el-sub-menu.is-active .el-sub-menu__title,
+.header_menu .el-menu--horizontal>.el-menu-item.is-active {
+    border-bottom: none;
+}
+
+.header_menu .el-menu-item:hover {
+    background-color: #0c1013;
+}
+
+.header_search {
+    padding-top: 15px;
+    width: 350px;
+    margin-left: auto;
+}
+
+.custom_component_header {
+    display: flex;
+}
+
+
+.header_logo {
+    color: white;
+}
+
+
+.custom_component {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.custom_carousel {
+    width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+
+
+.main_title {
+    background-color: #fdf006;
+    padding: 10px 15px;
+    font-size: 21px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.block_content {
+    width: 100%;
+}
+
+.block_content .title {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.title_content {
+    display: flex;
+}
+
+.film_content {
+    margin-top: 15px;
+}
+
+/*.film_content {*/
+/*    display: flex;*/
+/*}*/
+
+/*.film_content .film {*/
+/*    background-color: #a0aec0;*/
+/*    width: 30%;*/
+/*    height: 100px;*/
+/*}*/
+
+/* Отдельные стили для watch dogs */
+.watch-docs_a {
+    display: block;
+    padding-top: 2rem;
+    color: white;
+}
+
+.header_user {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title_categories {
+    display: flex;
+    margin-left: 10px;
+}
+
+.block_next {
+   margin-top: 50px;
+}
+
+.watch-docs_p {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 34px;
+    animation: glitch 2s steps(100) infinite;
+}
+
+/* GLITCH EFFECT */
+@keyframes glitch {
+    0% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+    4% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+    5% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+    10% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+    11% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+    15% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+    16% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+    20% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+    21% {text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;}
+    30% {text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;}
+    31% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
+    40% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
+    41% {text-shadow: 50px 0 0 blue, -50px 0 0 lime;}
+    42% {text-shadow: 0 0 0 blue, 0 0 0 lime;}
+    43% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+    46% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+    47% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+    50% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+    51% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+    55% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+    56% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+    60% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+    61% {text-shadow: 30px 0 0 red, -30px 0 0 lime;}
+    62% {text-shadow: 0 0 0 red, 0 0 0 lime;}
+    63% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 blue;}
+    66% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 blue;}
+    67% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+    70% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+    71% {text-shadow: 70px 0 0 red, -70px 0 0 blue;}
+    72% {text-shadow: 0 0 0 red, 0 0 0 blue;}
+    73% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+    76% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+    77% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+    80% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+    81% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+    85% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+    86% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+    90% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+    91% {text-shadow: 60px 0 0 lime, -60px 0 0 blue;}
+    92% {text-shadow: 0 0 0 lime, 0 0 0 blue;}
+    92% {text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;}
+    95% {text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;}
+    96% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
+    99% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
+    100% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
+}

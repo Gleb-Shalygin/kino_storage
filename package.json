@@ -11,7 +11,10 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@element-plus/icons-vue": "^2.1.0",
         "@vitejs/plugin-vue": "^4.4.0",
-        "vue": "^3.3.8"
+        "element-plus": "^2.4.2",
+        "vue": "^3.3.8",
+        "vue3-carousel": "^0.3.1"
     }
 }

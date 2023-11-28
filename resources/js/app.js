@@ -1,12 +1,26 @@
 import './bootstrap';
 import { createApp } from "vue/dist/vue.esm-bundler";
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import 'vue3-carousel/dist/carousel.css'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 import TestComponent from "./TestComponent.vue";
+import HomeComponent from "./home/HomeComponent.vue";
+import HeaderComponent from "./home/layout/HeaderComponent.vue";
+
 
 const app = createApp({
     components: {
-        TestComponent
+        TestComponent,
+        HomeComponent,
+        HeaderComponent
     }
 });
 
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+    app.component(key, component)
+}
+
+app.use(ElementPlus);
 app.mount('#app');
