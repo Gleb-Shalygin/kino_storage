@@ -13,7 +13,7 @@
                                 Смотреть прям сейчас
                             </div>
                             <div style="color: white; font-size: 24px; margin-left: auto">
-                                <span>★{{ item.rating }}</span>
+                                <span>★ {{ item.rating }}</span>
                             </div>
                         </div>
                     </div>

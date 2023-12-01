@@ -1,4 +1,5 @@
 @import "slider.css";
+@import "search.css";
 
 html,
 body {
@@ -85,26 +86,37 @@ body {
 .dropdown:hover .dropbtn {color: #a0aec0;}
 
 
-.header_search .el-input__wrapper.is-focus {
-    box-shadow: 0 0 0 1px #1D1D1D inset;
-}
-
 
 #el-popper-container-599 .el-popper {
     border: none;
 }
 
-
-
-.header_search .el-input__wrapper {
-    cursor: pointer;
-    background-color: #0c1013;
-    border-radius: 0;
+.custom_input .el-input__wrapper.is-focus {
     box-shadow: 0 0 0 1px #1D1D1D inset;
 }
 
-.header_search .el-input__wrapper:hover {
+
+.custom_input .el-input__wrapper {
+    cursor: pointer;
+    background-color: #0c1013;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #1D1D1D inset;
+}
+
+.custom_input .el-input__wrapper:hover {
     box-shadow: 0 0 19px 2px #1D1D1D;
+}
+
+.header_search a {
+    display: flex;
+}
+
+.header_search .el-icon {
+    margin-right: 5px;
+}
+
+.header_search {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header_menu {
@@ -122,12 +134,19 @@ body {
 
 .header_menu .el-menu-item:hover {
     background-color: #0c1013;
+    border-radius: 5px;
 }
 
 .header_search {
-    padding-top: 15px;
-    width: 350px;
-    margin-left: auto;
+    margin: 22px 0 0 auto;
+    color: white;
+}
+
+.header_path {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 .custom_component_header {
@@ -159,6 +178,10 @@ body {
     border-radius: 5px;
     font-weight: bold;
 }
+.main_title:hover {
+    background-color: #fdf681;
+}
+
 .block_content {
     width: 100%;
 }

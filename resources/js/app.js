@@ -9,13 +9,15 @@ import TestComponent from "./TestComponent.vue";
 import HomeComponent from "./home/HomeComponent.vue";
 import HeaderComponent from "./home/layout/HeaderComponent.vue";
 import FooterComponent from "./home/layout/FooterComponent.vue";
+import SearchComponent from "./site/SearchComponent.vue";
 
 const app = createApp({
     components: {
         TestComponent,
         HomeComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        SearchComponent
     }
 });
 

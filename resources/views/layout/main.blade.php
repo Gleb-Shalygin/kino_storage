@@ -25,9 +25,15 @@
 <div id="app" style="height: 100%; line-height: 1;">
     <div class="wrapper">
         <header class="header">
-            <header-component></header-component>
+            <header-component
+                home-route="{{ route('film.list') }}"
+                search-route="{{ route('search.index') }}"></header-component>
         </header>
-        <main class="main">@yield('content')</main>
+        <main class="main">
+            <div class="custom_component">
+                @yield('content')
+            </div>
+        </main>
         <footer class="footer"><footer-component></footer-component></footer>
     </div>
 </div>

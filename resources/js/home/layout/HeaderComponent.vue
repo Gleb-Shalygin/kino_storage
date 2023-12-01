@@ -13,7 +13,7 @@
                     active-text-color="#fff"
                     :ellipsis="false"
                 >
-                    <el-menu-item index="1">ФИЛЬМЫ</el-menu-item>
+                    <el-menu-item index="1"><a :href="homeRoute">ФИЛЬМЫ</a></el-menu-item>
                     <el-menu-item index="2">СЕРИАЛЫ</el-menu-item>
                     <el-sub-menu style="border: none" index="3">
                         <template #title>ПО ГОДАМ</template>
@@ -34,29 +34,34 @@
                 </el-menu>
             </div>
             <div class="header_search">
-                <el-input
-                    v-model="inputSearch"
-                    placeholder="Найти фильм..."
-                />
+                <a :href="searchRoute"><el-icon><Search /></el-icon> Поиск</a>
+<!--                <el-input-->
+<!--                    v-model="inputSearch"-->
+<!--                    placeholder="Найти фильм..."-->
+<!--                />-->
             </div>
             <div class="header_user">
-                <div style="margin: 15px 0 0 10px;">
-                    <el-avatar
-                        class="mr-3"
-                        :size="32"
-                        src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-                    />
-                </div>
-<!--                <div style="margin: 23px 0 0 10px;">-->
-<!--                    <a href="#">Войти </a>/<a href="#"> Регистрация</a>-->
+<!--                <div style="margin: 15px 0 0 10px;">-->
+<!--                    <el-avatar-->
+<!--                        class="mr-3"-->
+<!--                        :size="32"-->
+<!--                        src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"-->
+<!--                    />-->
 <!--                </div>-->
+                <div style="margin: 23px 0 0 10px; text-decoration: underline;">
+                    <a href="#">Войти </a>/<a href="#"> Регистрация</a>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import {Search} from "@element-plus/icons-vue";
+
 export default {
+    components: {Search},
+    props: ['homeRoute', 'searchRoute'],
     data() {
         return {
             inputSearch: ''
