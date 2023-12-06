@@ -1,7 +1,5 @@
 .block_content .search_content {
     width: 100%;
-    padding: 5px;
-    background-color: #0c1013;
-    border-radius: 5px;
+    margin-top: 10px;
     display: flex;
 }

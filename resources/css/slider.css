@@ -38,10 +38,6 @@
     position: absolute;
     z-index: 2;
     opacity: 0;
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*position: absolute;*/
-    /*filter: blur(4px);*/
 }
 
 .film_content .carousel__slide:hover .carousel__item {
@@ -50,6 +46,7 @@
 
 .film_content .carousel__slide:hover .film_play {
     opacity: 1;
+    cursor: pointer;
 }
 
 
