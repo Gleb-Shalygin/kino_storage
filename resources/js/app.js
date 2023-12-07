@@ -10,6 +10,7 @@ import HomeComponent from "./home/HomeComponent.vue";
 import HeaderComponent from "./home/layout/HeaderComponent.vue";
 import FooterComponent from "./home/layout/FooterComponent.vue";
 import SearchComponent from "./site/SearchComponent.vue";
+import MovieListComponent from "./site/MovieListComponent.vue";
 
 const app = createApp({
     components: {
@@ -17,7 +18,8 @@ const app = createApp({
         HomeComponent,
         HeaderComponent,
         FooterComponent,
-        SearchComponent
+        SearchComponent,
+        MovieListComponent
     }
 });
 

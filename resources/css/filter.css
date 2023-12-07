@@ -1,0 +1,55 @@
+.filter_content {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #0c1013;
+    border-radius: 5px;
+}
+
+.filter_item {
+    width: 30%;
+    margin-right: 10px;
+}
+
+.filter_content .el-input__wrapper {
+    background-color: #1d1d1d;
+    font-size: 20px;
+    padding: 10px;
+    box-shadow: none;
+}
+
+.filter_content .el-input__wrapper.is-focus,
+.filter_content .el-input__wrapper.is-focus:hover{
+    background-color: #3f3f3f;
+    box-shadow: none;
+}
+
+/*.el-select .el-input.is-focus .el-input__wrapper {*/
+/*    box-shadow: none;*/
+/*}*/
+
+/*#select_filter .el-input__wrapper,*/
+/*#select_filter .el-input.is-focus .el-input__wrapper:hover {*/
+/*    background-color: #3f3f3f;*/
+/*    box-shadow: none;*/
+/*}*/
+
+.filter_content .el-select .el-input.is-focus .el-input__wrapper,
+.filter_content .el-select .el-input.is-focus .el-input__wrapper:hover {
+    background-color: #3f3f3f;
+    box-shadow: none;
+}
+
+#select_filter .el-input__wrapper {
+    border-radius: 0;
+}
+
+.custom_select_filter {
+    width: 100%;
+}
+
+/*.el-select .el-input.is-focus .el-input__wrapper*/
+
+.filter_content .el-input__wrapper:hover {
+    box-shadow: none;
+    background-color: #1d1d1d8a;
+}

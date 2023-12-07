@@ -1,8 +1,6 @@
 @extends('layout.main')
 @section('title', 'Фильмы')
 @section('content')
-{{--    <div id="app">--}}
-
+        <movie-list-component movie-route="{{ route('film.list') }}"></movie-list-component>
 {{--        <home-component></home-component>--}}
-{{--    </div>--}}
 @endsection
