@@ -133,7 +133,7 @@
 
 <script>
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import limitText from '../functions/text.js';
+import limitText from '../../functions/text.js';
 
 export default {
     name: 'HomeComponent',

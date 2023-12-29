@@ -2,7 +2,7 @@
     <div class="custom_component">
         <div class="custom_component_header">
             <div class="header_logo">
-                <a href="/"><img src="../../../img/header/Logo3.png" style="width: 166px; height: 64px"></a>
+                <router-link :to="{path: '/'}"><img src="../../../../img/header/Logo3.png" style="width: 166px; height: 64px"></router-link>
             </div>
             <div class="header_menu">
                 <el-menu
@@ -11,9 +11,8 @@
                     background-color="#0c1013"
                     text-color="#fff"
                     active-text-color="#fff"
-                    :ellipsis="false"
-                >
-                    <el-menu-item index="1"><a :href="homeRoute">ФИЛЬМЫ</a></el-menu-item>
+                    :ellipsis="false" >
+                    <el-menu-item index="1"><router-link :to="{name: 'films'}">ФИЛЬМЫ</router-link></el-menu-item>
                     <el-menu-item index="2">СЕРИАЛЫ</el-menu-item>
                     <el-sub-menu style="border: none" index="3">
                         <template #title>ПО ГОДАМ</template>
@@ -34,20 +33,11 @@
                 </el-menu>
             </div>
             <div class="header_search">
-                <a :href="searchRoute"><el-icon><Search /></el-icon> Поиск</a>
-<!--                <el-input-->
-<!--                    v-model="inputSearch"-->
-<!--                    placeholder="Найти фильм..."-->
-<!--                />-->
+                <router-link :to="{name: 'search'}">
+                    <el-icon><Search /></el-icon> Поиск
+                </router-link>
             </div>
             <div class="header_user">
-<!--                <div style="margin: 15px 0 0 10px;">-->
-<!--                    <el-avatar-->
-<!--                        class="mr-3"-->
-<!--                        :size="32"-->
-<!--                        src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"-->
-<!--                    />-->
-<!--                </div>-->
                 <div style="margin: 23px 0 0 10px; text-decoration: underline;">
                     <a href="#">Войти </a>/<a href="#"> Регистрация</a>
                 </div>
@@ -61,7 +51,7 @@ import {Search} from "@element-plus/icons-vue";
 
 export default {
     components: {Search},
-    props: ['homeRoute', 'searchRoute'],
+    props: ['searchRoute'],
     data() {
         return {
             inputSearch: ''

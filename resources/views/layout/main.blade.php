@@ -24,19 +24,7 @@
 <body class="antialiased">
 
 <div id="app" style="height: 100%; line-height: 1;">
-    <div class="wrapper">
-        <header class="header">
-            <header-component
-                home-route="{{ route('film.list') }}"
-                search-route="{{ route('search.index') }}"></header-component>
-        </header>
-        <main class="main">
-            <div class="custom_component">
-                @yield('content')
-            </div>
-        </main>
-        <footer class="footer"><footer-component></footer-component></footer>
-    </div>
+    <app-component></app-component>
 </div>
 </body>
 

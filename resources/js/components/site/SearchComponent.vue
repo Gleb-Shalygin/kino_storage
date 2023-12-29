@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header_path" style="margin-bottom: 20px">
-            <a href="/">Kino Storage</a> / <a :href="searchRoute" style="color: #989898">Поиск</a>
+            <a href="/public">Kino Storage</a> / <a :href="searchRoute" style="color: #989898">Поиск</a>
         </div>
         <div class="block_content">
             <div class="title_content">
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import limitText from '../functions/text.js';
+import limitText from '../../functions/text.js';
 
 export default {
     props: ['searchRoute'],

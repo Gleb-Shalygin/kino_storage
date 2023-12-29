@@ -1,7 +1,9 @@
 <template>
     <div>
         <div class="header_path" style="margin-bottom: 20px">
-            <a href="/">Kino Storage</a> / <a :href="movieRoute" style="color: #989898">Фильмы</a>
+            <router-link :to="{path: '/'}">Kino Storage</router-link>
+            /
+            <router-link :to="{name: 'films'}" style="color: #989898">Фильмы</router-link>
         </div>
         <div class="block_content">
             <div class="title_content">
@@ -11,7 +13,6 @@
                 <el-tag
                     v-for="tag in tags"
                     :key="tag.id"
-                    class="mx-1"
                     closable
                     effect="plain"
                     type="warning"
@@ -55,18 +56,6 @@
 <!--                        <el-input v-model="input" placeholder="Страны" />-->
                     </el-col>
                 </el-row>
-                <div>
-
-                </div>
-<!--                <div class="filter_item">-->
-<!--                    <el-input v-model="input" placeholder="Годы" />-->
-<!--                </div>-->
-<!--                <div class="filter_item">-->
-<!--                    <el-input v-model="input" placeholder="Жанры" />-->
-<!--                </div>-->
-<!--                <div class="filter_item">-->
-<!--                    <el-input v-model="input" placeholder="Страны" />-->
-<!--                </div>-->
             </div>
             <div class="movies_content">
                 <div class="movie_item" v-for="movie in moviesList">
@@ -86,12 +75,19 @@
                     <img class="movie_play" src="/assets/icons/play-icon2.png" alt="img">
                 </div>
             </div>
+            <el-pagination
+                small
+                background
+                layout="prev, pager, next"
+                :total="50"
+                class="mt-4"
+            />
         </div>
     </div>
 </template>
 
 <script>
-import limitText from '../functions/text.js';
+import limitText from '../../functions/text.js';
 
 export default {
     name: "MovieListComponent",

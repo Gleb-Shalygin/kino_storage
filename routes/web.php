@@ -20,18 +20,14 @@ use App\Http\Controllers\SearchController;
 //    return view('welcome');
 //});
 
-Route::get('/watch-dogs', function() {
-    return view('watch_dogs2');
-});
+//Route::get('/watch-dogs', function() {
+//    return view('watch_dogs2');
+//});
+//
+//Route::controller(\App\Http\Controllers\SearchController::class)->prefix('search')->group(function () {
+//    Route::get('/', 'index')->name('search.index');
+//});
 
-Route::controller(HomeController::class)->group(function () {
-    Route::get('/', 'index')->name('home.index');
-});
-
-Route::controller(FilmController::class)->prefix('film')->group(function () {
-    Route::get('/list', 'list')->name('film.list');
-});
-
-Route::controller(\App\Http\Controllers\SearchController::class)->prefix('search')->group(function () {
-    Route::get('/', 'index')->name('search.index');
-});
+Route::get('/{any}', function() {
+    return view('layout.main');
+})->where("any", ".*");
