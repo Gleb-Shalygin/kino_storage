@@ -5,7 +5,10 @@
         </header>
         <main class="main">
             <div class="custom_component">
-                <router-view />
+                <div class="right-sidebar"></div>
+                <div class="content-block">
+                    <router-view />
+                </div>
             </div>
         </main>
         <footer class="footer">

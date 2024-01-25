@@ -1,0 +1,107 @@
+/* Базовые настройки */
+.title-post {
+    color: white;
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+.content-post {
+    color: white;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.author-post {
+    font-weight: 500;
+    color: #FFFF00FF;
+}
+
+.info-post {
+    display: flex;
+}
+
+.date-post {
+    color: #adadad;
+    margin: 2px 0 0 5px;
+}
+
+.read-post {
+    color: #FFFF00FF;
+    font-weight: 400;
+}
+
+/* Общие */
+.info-post-big .author-post,
+.info-post-feed .author-post {
+    font-size: 15px;
+}
+
+.info-post-big .date-post,
+.info-post-feed .date-post {
+    font-size: 13px
+}
+
+/* Настройки для больших постов */
+.news_level-1_content {
+    margin-top: 10px;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-post-big {
+    font-size: 29px;
+}
+
+.info-post-big {
+    margin-top: 10px;
+}
+
+/*.info-post-big .author-post {*/
+/*    font-size: 15px;*/
+/*}*/
+
+/*.info-post-big .date-post {*/
+/*    font-size: 13px*/
+/*}*/
+
+.content-post-big {
+    font-size: 14px;
+}
+
+.content-post-big .read-post,
+.content-post-feed .read-post {
+    font-size: 14px;
+}
+
+.latest-post-big {
+    width: 50%;
+    margin-right: 20px;
+}
+
+/* Маленькие посты */
+.latest-post-feed-blocks {
+    width: 45%;
+    /* margin-left: auto; */
+    padding: 0 20px;
+}
+
+.latest-post-feed {
+
+}
+
+.title-post-feed {
+    font-size: 19px;
+}
+
+.info-post-feed {
+    margin-top: 5px;
+}
+
+.next-latest-post-feed {
+    margin-top: 20px;
+}
+
+/*.info-post-feed .author-post {*/
+/*    font-size: 8px;*/
+/*}*/
