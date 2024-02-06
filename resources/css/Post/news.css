@@ -1,0 +1,145 @@
+/* Базовые настройки */
+.title-post {
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.title-post:hover {
+    text-decoration: underline;
+}
+
+.content-post {
+    color: white;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    line-height: 21px;
+    font-weight: 300;
+}
+
+.genre-post {
+    font-weight: 200;
+    color: white;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+.author-post {
+    cursor: pointer;
+    font-weight: 500;
+    color: #FFFF00FF;
+}
+
+.author-post:hover {
+    text-decoration: underline;
+}
+
+.info-post {
+    display: flex;
+}
+
+.date-post {
+    color: #adadad;
+    margin: 2px 0 0 5px;
+}
+
+.read-post {
+    color: #FFFF00FF;
+    font-weight: 400;
+}
+
+.views-post {
+    display: flex;
+    color: #adadad;
+    margin-left: 5px;
+}
+
+.views-post span {
+    padding: 1px 0 0 2px;
+}
+
+
+/* Общие */
+.info-post-big .author-post,
+.info-post-feed .author-post {
+    font-size: 15px;
+}
+
+.info-post-big .date-post,
+.info-post-feed .date-post,
+.info-post-big .views-post span,
+.info-post-feed .views-post span {
+    font-size: 13px
+}
+
+.latest-post-big img, .latest-post-feed img {
+    cursor: pointer;
+}
+
+/* Настройки для больших постов */
+.news_level-1_content {
+    margin-top: 10px;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-post-big {
+    font-size: 29px;
+    margin-top: 7px;
+}
+
+.info-post-big {
+    margin-top: 10px;
+}
+
+
+
+/*.info-post-big .author-post {*/
+/*    font-size: 15px;*/
+/*}*/
+
+/*.info-post-big .date-post {*/
+/*    font-size: 13px*/
+/*}*/
+
+.content-post-big {
+    font-size: 14px;
+}
+
+.content-post-big .read-post,
+.content-post-feed .read-post {
+    font-size: 14px;
+}
+
+.latest-post-big {
+    width: 55%;
+    margin-right: 20px;
+}
+
+/* Маленькие посты */
+.latest-post-feed-blocks {
+    width: 45%;
+    /* margin-left: auto; */
+    padding-left: 20px;
+}
+
+.latest-post-feed {
+
+}
+
+.title-post-feed {
+    font-size: 19px;
+    margin-top: 7px;
+}
+
+.info-post-feed {
+    margin: 6px 0 10px 0;
+}
+
+.next-latest-post-feed {
+    margin-top: 20px;
+}
+
+/*.info-post-feed .author-post {*/
+/*    font-size: 8px;*/
+/*}*/

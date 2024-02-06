@@ -1,0 +1,46 @@
+.right-sidebar {
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+}
+
+.title-sidebar {
+    color: #bbb9b9;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.title-post-sidebar {
+    font-size: 17px;
+}
+
+.info-post-sidebar .author-post {
+    font-size: 15px;
+}
+
+.post-sidebar, .posts-sidebar, .sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    gap: 30px;
+}
+
+.post-sidebar {
+    gap: 5px;
+}
+
+.posts-sidebar {
+    gap: 15px;
+}
+
+.info-post-sidebar .date-post,
+.info-post-sidebar .views-post {
+    font-size: 13px;
+}
+
+.content-post-sidebar {
+
+}

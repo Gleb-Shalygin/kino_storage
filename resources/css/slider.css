@@ -1,5 +1,4 @@
 .film_title {
-    position: absolute;
     left: 0;
     font-size: 20px;
     bottom: 20px;
@@ -7,29 +6,44 @@
     color: white;
 }
 
-.film_genre {
-    left: 0;
-    top: -20px;
-    color: #909090;
-    font-size: 17px;
-    position: absolute;
+.film_genre_and_date .author-post {
+    font-size: 14px;
 }
 
-.film_rating {
-    background: #f78989;
+.film_date {
+    font-size: 12px;
+    color: #a1a1a1;
+    margin: 2px 3px;
+}
+
+/*.film_rating {*/
+/*    background: #f78989;*/
+/*    position: absolute;*/
+/*    right: 20px;*/
+/*    top: 10px;*/
+/*    font-weight: bold;*/
+/*    padding: 2px 5px;*/
+/*    border-radius: 3px;*/
+/*}*/
+
+.film-view {
+    font-size: 17px;
+    background: #FFFF00FF;
     position: absolute;
-    right: 20px;
+    right: 15px;
+    color: black;
     top: 10px;
-    font-weight: bold;
+    font-weight: 400;
     padding: 2px 5px;
     border-radius: 3px;
+    display: flex;
 }
 
 .film_info {
     width: 100%;
-    position: absolute;
     left: 15px;
     bottom: 15px;
+    margin-top: 110px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -38,15 +52,6 @@
     position: absolute;
     z-index: 2;
     opacity: 0;
-}
-
-.film_content .carousel__slide:hover .carousel__item {
-    filter: blur(10px);
-}
-
-.film_content .carousel__slide:hover .film_play {
-    opacity: 1;
-    cursor: pointer;
 }
 
 

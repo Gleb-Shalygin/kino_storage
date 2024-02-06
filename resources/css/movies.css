@@ -34,11 +34,11 @@
     opacity: 0;
 }
 
-.movies_content .movie_item:hover .movie_block {
-    filter: blur(10px);
-}
+/*.movies_content .movie_item:hover .movie_block {*/
+/*    filter: blur(10px);*/
+/*}*/
 
-.movies_content .movie_item:hover .movie_play {
-    opacity: 1;
-    cursor: pointer;
-}
+/*.movies_content .movie_item:hover .movie_play {*/
+/*    opacity: 1;*/
+/*    cursor: pointer;*/
+/*}*/

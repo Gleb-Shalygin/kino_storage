@@ -1,88 +1,84 @@
 <template>
-    <div>
-        <div class="header_path" style="margin-bottom: 20px">
-            <router-link :to="{path: '/'}">Kino Storage</router-link>
-            /
-            <router-link :to="{name: 'films'}" style="color: #989898">Фильмы</router-link>
+    <div class="header_path" style="margin-bottom: 20px">
+        <router-link :to="{path: '/'}">Kino Storage</router-link>
+        /
+        <router-link :to="{name: 'films'}" style="color: #989898">Фильмы</router-link>
+    </div>
+    <div class="block_content">
+        <div class="title_content">
+            <div class="title">Фильмы</div>
         </div>
-        <div class="block_content">
-            <div class="title_content">
-                <div class="title">Фильмы</div>
-            </div>
-            <div>
-                <el-tag
-                    v-for="tag in tags"
-                    :key="tag.id"
-                    closable
-                    effect="plain"
-                    type="warning"
-                >
-                    {{ tag.name }}
-                </el-tag>
-            </div>
-            <div class="filter_content">
-                <el-row :gutter="24">
-                    <el-col :span="8">
-                        <el-select v-model="value" class="custom_select_filter" placeholder="Годы" size="large">
-                            <el-option
-                                v-for="item in options"
-                                :key="item.value"
-                                :label="item.label"
-                                :value="item.value"
-                            />
-                        </el-select>
-<!--                        <el-input v-model="input" placeholder="Годы" />-->
-                    </el-col>
-                    <el-col :span="8">
-                        <el-select v-model="value" class="custom_select_filter" placeholder="Жанры" size="large">
-                            <el-option
-                                v-for="item in options"
-                                :key="item.value"
-                                :label="item.label"
-                                :value="item.value"
-                            />
-                        </el-select>
-<!--                        <el-input v-model="input" placeholder="Жанры" />-->
-                    </el-col>
-                    <el-col :span="8">
-                        <el-select v-model="value" class="custom_select_filter" placeholder="Страны" size="large">
-                            <el-option
-                                v-for="item in options"
-                                :key="item.value"
-                                :label="item.label"
-                                :value="item.value"
-                            />
-                        </el-select>
-<!--                        <el-input v-model="input" placeholder="Страны" />-->
-                    </el-col>
-                </el-row>
-            </div>
-            <div class="movies_content">
-                <div class="movie_item" v-for="movie in moviesList">
-                    <div class="movie_block" :style="{ backgroundImage: 'url(' + movie.img + ')'}">
-                        <div class="film_rating">
-                            ★ {{ movie.rating }}
+        <div>
+            <el-tag
+                v-for="tag in tags"
+                :key="tag.id"
+                closable
+                effect="plain"
+                type="warning"
+            >
+                {{ tag.name }}
+            </el-tag>
+        </div>
+        <div class="filter_content">
+            <el-row :gutter="24">
+                <el-col :span="8">
+                    <el-select v-model="value" class="custom_select_filter" placeholder="Годы" size="large">
+                        <el-option
+                            v-for="item in options"
+                            :key="item.value"
+                            :label="item.label"
+                            :value="item.value"
+                        />
+                    </el-select>
+                </el-col>
+                <el-col :span="8">
+                    <el-select v-model="value" class="custom_select_filter" placeholder="Жанры" size="large">
+                        <el-option
+                            v-for="item in options"
+                            :key="item.value"
+                            :label="item.label"
+                            :value="item.value"
+                        />
+                    </el-select>
+                </el-col>
+                <el-col :span="8">
+                    <el-select v-model="value" class="custom_select_filter" placeholder="Страны" size="large">
+                        <el-option
+                            v-for="item in options"
+                            :key="item.value"
+                            :label="item.label"
+                            :value="item.value"
+                        />
+                    </el-select>
+                    <!--                        <el-input v-model="input" placeholder="Страны" />-->
+                </el-col>
+            </el-row>
+        </div>
+        <div class="movies_content">
+            <div class="movie_item" v-for="movie in moviesList">
+                <div class="movie_block" :style="{ backgroundImage: 'url(' + movie.img + ')'}">
+                    <div class="film_rating">
+                        ★ {{ movie.rating }}
+                    </div>
+                    <div class="film_info">
+                        <div class="film_title">
+                            {{ limitText(movie.title, 30) }}
                         </div>
-                        <div class="film_info">
-                            <div class="film_title">
-                                {{ limitText(movie.title, 30) }}
-                            </div>
-                            <div class="film_genre">
-                                {{ movie.genre }}
-                            </div>
+                        <div class="film_genre">
+                            {{ movie.genre }}
                         </div>
                     </div>
-                    <img class="movie_play" src="/assets/icons/play-icon2.png" alt="img">
                 </div>
+                <img class="movie_play" src="/assets/icons/play-icon2.png" alt="img">
             </div>
-            <el-pagination
-                small
-                background
-                layout="prev, pager, next"
-                :total="50"
-                class="mt-4"
-            />
         </div>
+        <el-pagination
+            small
+            background
+            layout="prev, pager, next"
+            :total="50"
+            class="mt-4"
+        />
     </div>
 </template>
 

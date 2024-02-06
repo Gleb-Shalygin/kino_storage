@@ -5,7 +5,9 @@
         </header>
         <main class="main">
             <div class="custom_component">
-                <div class="right-sidebar"></div>
+                <div class="right-sidebar">
+                    <SidebarComponent />
+                </div>
                 <div class="content-block">
                     <router-view />
                 </div>
@@ -20,15 +22,32 @@
 <script>
 import HeaderComponent from "./components/home/layout/HeaderComponent.vue";
 import FooterComponent from "./components/home/layout/FooterComponent.vue";
+import SidebarComponent from "./components/home/layout/SidebarComponent.vue";
 
 export default {
     name: 'AppComponent',
-    components: { HeaderComponent, FooterComponent },
+    components: {SidebarComponent, HeaderComponent, FooterComponent },
     data() {
         return {
-
+            onScroll: 0,
         }
-    }
+    },
+    // watch: {
+    //     onScroll(val) {
+    //         console.log(val);
+    //     }
+    // },
+    methods: {
+        handleScroll(val) {
+            this.onScroll = window.scrollY;
+        }
+    },
+    created () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    unmounted () {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
 }
 
 </script>

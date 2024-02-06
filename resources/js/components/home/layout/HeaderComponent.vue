@@ -1,5 +1,5 @@
 <template>
-    <div class="custom_component">
+    <div style="width: 1200px; margin: 0 auto">
         <div class="custom_component_header">
             <div class="header_logo">
                 <router-link :to="{path: '/'}"><img src="../../../../img/header/Logo3.png" style="width: 166px; height: 64px"></router-link>

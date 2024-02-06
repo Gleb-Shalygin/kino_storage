@@ -1,0 +1,32 @@
+/* Общее */
+.news_level-2_content,
+.post-feed-list {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.news_level-2_content {
+    margin-top: 15px;
+}
+
+.post-feed-list {
+    display: flex;
+    margin: 15px 0;
+}
+
+.image-for-post-list {
+    width: 30%;
+}
+
+.content-for-post-list {
+    margin-left: 15px;
+    width: 100%;
+}
+
+.title-post-list {
+    font-size: 19px;
+}
+
+.info-post-list {
+    margin-top: 10px    ;
+}
