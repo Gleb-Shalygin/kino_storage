@@ -1,0 +1,11 @@
+.content-post-show {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.image-for-post-show {
+    width: 100%;
+    height: 450px;
+}

@@ -5,6 +5,7 @@
 @import "Post/news.css";
 @import "Post/list.css";
 @import "sidebar.css";
+@import "post.css";
 
 html,
 body {
@@ -268,6 +269,10 @@ body {
     font-size: 34px;
     animation: glitch 2s steps(100) infinite;
 }
+
+/*.el-pagination button {*/
+/*    background-color: #1D1D1D;*/
+/*}*/
 
 /* GLITCH EFFECT */
 @keyframes glitch {

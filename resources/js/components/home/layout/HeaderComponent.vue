@@ -12,10 +12,10 @@
                     text-color="#fff"
                     active-text-color="#fff"
                     :ellipsis="false" >
-                    <el-menu-item index="1"><router-link :to="{name: 'films'}">ФИЛЬМЫ</router-link></el-menu-item>
-                    <el-menu-item index="2">СЕРИАЛЫ</el-menu-item>
+                    <el-menu-item index="1"><router-link :to="{name: 'posts'}">НОВЫЕ</router-link></el-menu-item>
+                    <el-menu-item index="2">ФИЛЬМЫ</el-menu-item>
                     <el-sub-menu style="border: none" index="3">
-                        <template #title>ПО ГОДАМ</template>
+                        <template #title>СЕРИАЛЫ</template>
                         <el-menu-item index="2-1">2023</el-menu-item>
                         <el-menu-item index="2-2">2022</el-menu-item>
                         <el-menu-item index="2-3">2021</el-menu-item>
@@ -24,12 +24,13 @@
                         <el-menu-item index="2-6">2018</el-menu-item>
                         <el-menu-item index="2-7">2017</el-menu-item>
                     </el-sub-menu>
-                    <el-sub-menu index="4">
-                        <template #title>ЖАНРЫ</template>
-                        <el-menu-item index="2-1">Комедия</el-menu-item>
-                        <el-menu-item index="2-2">Драмма</el-menu-item>
-                        <el-menu-item index="2-3">Криминал</el-menu-item>
-                    </el-sub-menu>
+<!--                    <el-sub-menu index="4">-->
+<!--                        <template #title>ЖАНРЫ</template>-->
+<!--                        <el-menu-item index="2-1">Комедия</el-menu-item>-->
+<!--                        <el-menu-item index="2-2">Драмма</el-menu-item>-->
+<!--                        <el-menu-item index="2-3">Криминал</el-menu-item>-->
+<!--                    </el-sub-menu>-->
+                    <el-menu-item index="4">СТАТЬ АВТОРОМ</el-menu-item>
                 </el-menu>
             </div>
             <div class="header_search">
@@ -38,8 +39,10 @@
                 </router-link>
             </div>
             <div class="header_user">
-                <div style="margin: 23px 0 0 10px; text-decoration: underline;">
-                    <a href="#">Войти </a>/<a href="#"> Регистрация</a>
+                <div style="margin: 23px 0 0 10px;">
+                    <a style="text-decoration: underline" href="#">Войти</a>
+                    /
+                    <a style="text-decoration: underline" href="#">Регистрация</a>
                 </div>
             </div>
         </div>
