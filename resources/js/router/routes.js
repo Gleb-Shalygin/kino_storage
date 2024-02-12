@@ -3,6 +3,7 @@ import HomeComponent from "../HomeComponent.vue";
 import MovieListComponent from "../site/MovieListComponent.vue";
 import SearchComponent from "../site/SearchComponent.vue";
 import ShowPost from "../site/ShowPost.vue";
+import AccountLogin from "../site/account/AccountLogin.vue";
 
 
 const routes = [
@@ -30,6 +31,11 @@ const routes = [
         path: '/posts/show-post',
         component: ShowPost,
         name: 'posts.show-post'
+    },
+    {
+        path: '/login',
+        component: AccountLogin,
+        name: 'login'
     }
 ]
 

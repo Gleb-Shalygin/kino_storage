@@ -24,12 +24,6 @@
                         <el-menu-item index="2-6">2018</el-menu-item>
                         <el-menu-item index="2-7">2017</el-menu-item>
                     </el-sub-menu>
-<!--                    <el-sub-menu index="4">-->
-<!--                        <template #title>ЖАНРЫ</template>-->
-<!--                        <el-menu-item index="2-1">Комедия</el-menu-item>-->
-<!--                        <el-menu-item index="2-2">Драмма</el-menu-item>-->
-<!--                        <el-menu-item index="2-3">Криминал</el-menu-item>-->
-<!--                    </el-sub-menu>-->
                     <el-menu-item index="4">СТАТЬ АВТОРОМ</el-menu-item>
                 </el-menu>
             </div>
@@ -40,7 +34,7 @@
             </div>
             <div class="header_user">
                 <div style="margin: 23px 0 0 10px;">
-                    <a style="text-decoration: underline" href="#">Войти</a>
+                    <a style="text-decoration: underline"><router-link :to="{name: 'login'}">Войти</router-link></a>
                     /
                     <a style="text-decoration: underline" href="#">Регистрация</a>
                 </div>
