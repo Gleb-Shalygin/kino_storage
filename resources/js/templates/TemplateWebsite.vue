@@ -21,12 +21,11 @@
 
 <script>
 import SidebarComponent from "../components/home/layout/SidebarComponent.vue";
-import HeaderComponent from "../components/home/layout/HeaderComponent.vue";
 import FooterComponent from "../components/home/layout/FooterComponent.vue";
 
 export default {
     name: 'AppComponent',
-    components: { SidebarComponent, HeaderComponent, FooterComponent },
+    components: { SidebarComponent, FooterComponent },
     data() {
         return {
             onScroll: 0,
