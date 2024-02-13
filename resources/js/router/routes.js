@@ -1,40 +1,33 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeComponent from "../HomeComponent.vue";
-import MovieListComponent from "../site/MovieListComponent.vue";
-import SearchComponent from "../site/SearchComponent.vue";
-import ShowPost from "../site/ShowPost.vue";
-import AccountLogin from "../site/account/AccountLogin.vue";
-
+import PageHome from "../pages/site/PageHome.vue";
+import PageNews from "../pages/site/PageNews.vue";
+import PageSearch from "../pages/site/PageSearch.vue";
+import PagePost from "../pages/site/PagePost.vue";
+import PageLogin from "../pages/site/account/PageLogin.vue";
 
 const routes = [
     {
         path: '/',
-        component: HomeComponent
+        component: PageHome
     },
     {
         path: '/search',
-        component: SearchComponent,
+        component: PageSearch,
         name: 'search'
     },
     {
         path: '/posts',
-        component: MovieListComponent,
+        component: PageNews,
         name: 'posts',
-        // children: [
-        //     {
-        //         path: 'show-post',
-        //         component: ShowPost
-        //     }
-        // ]
     },
     {
         path: '/posts/show-post',
-        component: ShowPost,
+        component: PagePost,
         name: 'posts.show-post'
     },
     {
         path: '/login',
-        component: AccountLogin,
+        component: PageLogin,
         name: 'login'
     }
 ]

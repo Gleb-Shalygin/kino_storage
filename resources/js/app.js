@@ -4,14 +4,18 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import 'vue3-carousel/dist/carousel.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-
-import AppComponent from "./App.vue"
-
+import App from "./App.vue"
 import router from "./router/routes.js";
 
-const app = createApp({
-    components: { AppComponent }
-});
+// import templates
+import TemplateWebsite from "./templates/TemplateWebsite.vue";
+import TemplateAuth from "./templates/TemplateAuth.vue";
+
+const app = createApp(App);
+
+// use templates
+app.component('template-website', TemplateWebsite);
+app.component('template-auth', TemplateAuth);
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)
