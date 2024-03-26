@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FilmController;
@@ -31,3 +32,7 @@ use App\Http\Controllers\SearchController;
 Route::get('/{any}', function() {
     return view('layout.main');
 })->where("any", ".*");
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

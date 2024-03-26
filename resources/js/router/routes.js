@@ -4,6 +4,8 @@ import PageNews from "../pages/site/PageNews.vue";
 import PageSearch from "../pages/site/PageSearch.vue";
 import PagePost from "../pages/site/PagePost.vue";
 import PageLogin from "../pages/site/account/PageLogin.vue";
+import PageRegister from "../pages/site/account/PageRegister.vue";
+import PageProfile from "../pages/site/account/PageProfile.vue";
 
 const routes = [
     {
@@ -29,9 +31,37 @@ const routes = [
         path: '/login',
         component: PageLogin,
         name: 'login'
+    },
+    {
+        path: '/register',
+        component: PageRegister,
+        name: 'register'
+    },
+    {
+        path: '/account/profile',
+        component: PageProfile,
+        name: 'account.profile'
     }
-]
+];
 
-const router = createRouter({ history: createWebHistory(), routes })
+const router = createRouter({ history: createWebHistory(), routes });
+
+router.beforeEach((to, from, next) => {
+    const token = localStorage.getItem('x_xsrf_token');
+
+    if (!token) {
+        if (to.name === 'login' || to.name === 'register') {
+            return next();
+        } else {
+            return next({ name: 'login' });
+        }
+    }
+
+    if (to.name === 'login' || to.name === 'registration' && token) {
+        return next({ name: 'account.profile' });
+    }
+
+    next();
+});
 
 export default router;

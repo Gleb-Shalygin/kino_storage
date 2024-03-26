@@ -34,9 +34,19 @@
             </div>
             <div class="header_user">
                 <div style="margin: 23px 0 0 10px;">
-                    <a style="text-decoration: underline"><router-link :to="{name: 'login'}">Войти</router-link></a>
-                    /
-                    <a style="text-decoration: underline" href="#">Регистрация</a>
+                    <a v-if="!token"
+                       style="text-decoration: underline"><router-link :to="{name: 'login'}">Войти /</router-link></a>
+                    <a v-if="!token"
+                       style="text-decoration: underline">
+                        <router-link :to="{name: 'register'}">Регистрация</router-link>
+                    </a>
+                    <a v-if="token"
+                       style="text-decoration: underline">
+                        <router-link :to="{name: 'account.profile'}">Профиль /</router-link>
+                    </a>
+                    <a v-if="token"
+                       style="text-decoration: underline"
+                       @click.prevent="logout" href="#">Выйти</a>
                 </div>
             </div>
         </div>
@@ -44,14 +54,27 @@
 </template>
 
 <script>
-import {Search} from "@element-plus/icons-vue";
+import { Search } from "@element-plus/icons-vue";
 
 export default {
-    components: {Search},
+    components: { Search },
     props: ['searchRoute'],
     data() {
         return {
             inputSearch: ''
+        }
+    },
+    computed: {
+        token() {
+            return localStorage.getItem('x_xsrf_token');
+        }
+    },
+    methods: {
+        logout() {
+            axios.post('/logout').then((response) => {
+                localStorage.removeItem('x_xsrf_token');
+                this.$router.push({ name: 'login' });
+            });
         }
     }
 }

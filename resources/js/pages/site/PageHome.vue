@@ -359,6 +359,12 @@ export default {
     },
     methods: {
         limitText,
+    },
+    mounted() {
+        axios.get('/api/get')
+            .then((response) => {
+                console.log(response);
+        })
     }
 }
 
