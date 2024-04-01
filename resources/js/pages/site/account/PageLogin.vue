@@ -1,16 +1,24 @@
 <template>
     <template-auth>
         <div class="auth">
-            <label class="form-auth-title">АВТОРИЗАЦИЯ</label>
-            <div class="form-auth">
-                <input v-model="email"
-                       type="text" class="form-auth-input-label" placeholder="Логин">
-                <input v-model="password"
-                    type="password" class="form-auth-input-label" placeholder="Пароль">
-                <el-button
-                    color="#ffffff"
-                    dark="dark"
-                    @click="login">Войти</el-button>
+            <div class="auth__title">АВТОРИЗАЦИЯ</div>
+            <div class="auth__group-items">
+                <div class="auth__group-item">
+                    <input type="text" class="auth__group-input" required>
+                    <label class="auth__group-label">Логин</label>
+                </div>
+                <div class="auth__group-item">
+                    <input type="password" class="auth__group-input" required>
+                    <label class="auth__group-label">Пароль</label>
+                </div>
+            </div>
+            <button class="auth__submit">ВОЙТИ</button>
+            <div class="auth__footer">
+                <div class="auth__save-me">
+                    <input type="checkbox">
+                    <span> Запомнить меня</span>
+                </div>
+                <div class="auth__you-forgot-password">Вы забыли пароль?</div>
             </div>
         </div>
     </template-auth>

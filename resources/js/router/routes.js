@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { isAuth } from "../functions/auth.js";
 import PageHome from "../pages/site/PageHome.vue";
 import PageNews from "../pages/site/PageNews.vue";
 import PageSearch from "../pages/site/PageSearch.vue";
@@ -40,28 +41,33 @@ const routes = [
     {
         path: '/account/profile',
         component: PageProfile,
-        name: 'account.profile'
+        name: 'account.profile',
+        beforeEnter:(to, from, next) => {
+            next(isAuth(to, from, next));
+        }
     }
 ];
 
 const router = createRouter({ history: createWebHistory(), routes });
+// Общая проверка
+// router.beforeEach((to, from, next) => {
 
-router.beforeEach((to, from, next) => {
-    const token = localStorage.getItem('x_xsrf_token');
+    // const token = localStorage.getItem('x_xsrf_token');
 
-    if (!token) {
-        if (to.name === 'login' || to.name === 'register') {
-            return next();
-        } else {
-            return next({ name: 'login' });
-        }
-    }
+    // if (!token) {
+    //     if (to.name === 'login' || to.name === 'register') {
+    //         return next();
+    //     } else {
+    //         return next({ name: 'login' });
+    //     }
+    // }
+    //
+    // if (to.name === 'login' || to.name === 'registration' && token) {
+    //     return next({ name: 'account.profile' });
+    // }
+    //
+    // next();
+// });
 
-    if (to.name === 'login' || to.name === 'registration' && token) {
-        return next({ name: 'account.profile' });
-    }
-
-    next();
-});
 
 export default router;
