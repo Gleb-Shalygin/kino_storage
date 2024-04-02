@@ -14,11 +14,15 @@ import TemplateAuth from "./templates/TemplateAuth.vue";
 // import layout
 import HeaderComponent from "./components/home/layout/HeaderComponent.vue";
 
+// import component
+import ErrorAuthComponent from "./components/ErrorAuthComponent.vue";
+
 const app = createApp(App);
 
 // use templates
 app.component('template-website', TemplateWebsite);
 app.component('template-auth', TemplateAuth);
+app.component('error-auth', ErrorAuthComponent);
 app.component('HeaderComponent', HeaderComponent);
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {

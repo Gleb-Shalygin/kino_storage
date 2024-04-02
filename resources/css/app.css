@@ -30,8 +30,8 @@ body {
 }
 
 .main {
-    background-color: #ffd023;
-    /*background: url('/public/assets/images/marvel.jpg');*/
+    /*background-color: #ffd023;*/
+    background: url('/public/assets/images/BackgroundMain.jpg');
     padding: 30px;
     flex: 1 1 auto;
 }
@@ -253,6 +253,18 @@ body {
 .header_user {
     color: white;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 10px;
+}
+
+.header_user-icon-profile {
+    width: 25px;
+}
+
+.header_user-icon-logout {
+    width: 25px;
 }
 
 .title_categories {

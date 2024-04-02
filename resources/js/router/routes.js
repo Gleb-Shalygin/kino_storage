@@ -11,7 +11,8 @@ import PageProfile from "../pages/site/account/PageProfile.vue";
 const routes = [
     {
         path: '/',
-        component: PageHome
+        component: PageHome,
+        name: 'main'
     },
     {
         path: '/search',

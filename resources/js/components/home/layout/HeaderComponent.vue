@@ -33,21 +33,44 @@
                 </router-link>
             </div>
             <div class="header_user">
-                <div style="margin: 23px 0 0 10px;">
-                    <a v-if="!token"
-                       style="text-decoration: underline"><router-link :to="{name: 'login'}">Войти /</router-link></a>
-                    <a v-if="!token"
-                       style="text-decoration: underline">
-                        <router-link :to="{name: 'register'}">Регистрация</router-link>
-                    </a>
-                    <a v-if="token"
-                       style="text-decoration: underline">
-                        <router-link :to="{name: 'account.profile'}">Профиль /</router-link>
-                    </a>
-                    <a v-if="token"
-                       style="text-decoration: underline"
-                       @click.prevent="logout" href="#">Выйти</a>
-                </div>
+                <a v-if="!token"
+                   style="text-decoration: underline"><router-link :to="{name: 'login'}">Войти /</router-link></a>
+                <a v-if="!token"
+                   style="text-decoration: underline">
+                    <router-link :to="{name: 'register'}">Регистрация</router-link>
+                </a>
+                <router-link :to="{name: 'account.profile'}">
+                    <!--                            Профиль-->
+                    <!--                            /-->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         class="header_user-icon-profile"
+                         viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3s1.34-3 3-3zm0 14.2a7.2 7.2 0 0 1-6-3.22c.03-1.99 4-3.08 6-3.08c1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 0 1-6 3.22z"
+                            fill="currentColor"></path>
+                    </svg>
+                </router-link>
+
+                <!--                    <a v-if="token">-->
+
+                <!--                    </a>-->
+                <button v-if="token"
+                        @click.prevent="logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         class="header_user-icon-logout"
+                         viewBox="0 0 24 24">
+                        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round">
+                            <path
+                                d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"></path>
+                            <path d="M7 12h14l-3-3m0 6l3-3"></path>
+                        </g>
+                    </svg>
+                    <!--                        Выйти-->
+                </button>
+    <!--                <div style="margin: 23px 0 0 10px;">-->
+    <!--                    -->
+    <!--                </div>-->
             </div>
         </div>
     </div>

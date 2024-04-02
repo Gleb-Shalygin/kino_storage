@@ -361,10 +361,10 @@ export default {
         limitText,
     },
     mounted() {
-        axios.get('/api/get')
-            .then((response) => {
-                console.log(response);
-        })
+        // axios.get('/api/get')
+        //     .then((response) => {
+        //         console.log(response);
+        // })
     }
 }
 

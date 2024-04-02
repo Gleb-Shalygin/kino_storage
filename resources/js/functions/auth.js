@@ -11,8 +11,8 @@ export function isAuth(to, from, next) {
     }
 
     if (to.name === 'login' || to.name === 'registration' && token) {
-        return { name: 'account.profile' };
+        return { name: 'main' };
     }
 
-    return {};
+    return next;
 }
