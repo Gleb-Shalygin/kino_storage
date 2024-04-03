@@ -34,14 +34,14 @@
             </div>
             <div class="header_user">
                 <a v-if="!token"
-                   style="text-decoration: underline"><router-link :to="{name: 'login'}">Войти /</router-link></a>
+                   style="text-decoration: underline"><router-link :to="{name: 'login'}">Войти</router-link></a>
+                <span v-if="!token">/</span>
                 <a v-if="!token"
                    style="text-decoration: underline">
                     <router-link :to="{name: 'register'}">Регистрация</router-link>
                 </a>
-                <router-link :to="{name: 'account.profile'}">
-                    <!--                            Профиль-->
-                    <!--                            /-->
+                <router-link v-if="token"
+                             :to="{name: 'account.profile'}">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          class="header_user-icon-profile"
                          viewBox="0 0 24 24">
@@ -50,10 +50,6 @@
                             fill="currentColor"></path>
                     </svg>
                 </router-link>
-
-                <!--                    <a v-if="token">-->
-
-                <!--                    </a>-->
                 <button v-if="token"
                         @click.prevent="logout">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -66,11 +62,7 @@
                             <path d="M7 12h14l-3-3m0 6l3-3"></path>
                         </g>
                     </svg>
-                    <!--                        Выйти-->
                 </button>
-    <!--                <div style="margin: 23px 0 0 10px;">-->
-    <!--                    -->
-    <!--                </div>-->
             </div>
         </div>
     </div>

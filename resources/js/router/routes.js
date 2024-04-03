@@ -4,8 +4,8 @@ import PageHome from "../pages/site/PageHome.vue";
 import PageNews from "../pages/site/PageNews.vue";
 import PageSearch from "../pages/site/PageSearch.vue";
 import PagePost from "../pages/site/PagePost.vue";
-import PageLogin from "../pages/site/account/PageLogin.vue";
-import PageRegister from "../pages/site/account/PageRegister.vue";
+import PageLogin from "../pages/site/auth/PageLogin.vue";
+import PageRegister from "../pages/site/auth/PageRegister.vue";
 import PageProfile from "../pages/site/account/PageProfile.vue";
 
 const routes = [
@@ -32,12 +32,18 @@ const routes = [
     {
         path: '/login',
         component: PageLogin,
-        name: 'login'
+        name: 'login',
+        beforeEnter:(to, from, next) => {
+            next(isAuth(to, from, next));
+        }
     },
     {
         path: '/register',
         component: PageRegister,
-        name: 'register'
+        name: 'register',
+        beforeEnter:(to, from, next) => {
+            next(isAuth(to, from, next));
+        }
     },
     {
         path: '/account/profile',

@@ -105,6 +105,7 @@
 }
 
 .auth__error {
+    text-align: left;
     margin-top: 10px;
     letter-spacing: 2px;
     background-color: #a60000;

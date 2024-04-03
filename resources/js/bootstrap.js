@@ -17,7 +17,6 @@ window.axios.interceptors.response.use({}, error => {
     if (error.config.url === '/login') {
         return error;
     }
-    // console.log()
     if (error.response.status === 401 || error.response.status === 419) {
         const token = localStorage.getItem('x_xsrf_token');
 

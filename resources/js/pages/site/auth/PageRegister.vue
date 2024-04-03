@@ -20,6 +20,7 @@
                     <label class="auth__group-label">Подтвердите пароль</label>
                 </div>
             </div>
+            <error-auth :error="error" @clearError="error = ''" />
             <button class="auth__submit" @click="register">ПРОДОЛЖИТЬ</button>
             <div class="auth__footer">
                 <div class="auth__save-me">
@@ -27,22 +28,7 @@
                     <span> Запомнить меня</span>
                 </div>
                 <router-link class="auth__you-forgot-password" :to="{name: 'login'}">У вас уже есть аккаунт?</router-link>
-<!--                <div class="auth__you-forgot-password">У вас уже есть аккаунт?</div>-->
             </div>
-<!--            <div class="form-auth">-->
-<!--                <input v-model="name"-->
-<!--                       type="text" class="form-auth-input-label" placeholder="Имя">-->
-<!--                <input v-model="email"-->
-<!--                       type="text" class="form-auth-input-label" placeholder="Логин">-->
-<!--                <input v-model="password"-->
-<!--                       type="password" class="form-auth-input-label" placeholder="Пароль">-->
-<!--                <input v-model="password_confirmation"-->
-<!--                       type="password" class="form-auth-input-label" placeholder="Подтвердите пароль">-->
-<!--                <el-button-->
-<!--                    color="#ffffff"-->
-<!--                    dark="dark"-->
-<!--                    @click="register">Зарегистрироваться</el-button>-->
-<!--            </div>-->
         </div>
     </template-auth>
 </template>
@@ -54,7 +40,8 @@ export default {
             email: null,
             password: null,
             name: null,
-            password_confirmation: null
+            password_confirmation: null,
+            error: ''
         }
     },
     methods: {
@@ -66,8 +53,28 @@ export default {
                     password: this.password,
                     password_confirmation: this.password_confirmation,
                 }).then((response) => {
+                    if (response.response) {
+                        if (response.response.status === 422) {
+                            this.error = response.response.data.message;
+                            return;
+                        }
+
+                        if (response.response.status === 401 || response.response.status === 419) {
+                            this.error = response.response.data.message;
+                            return;
+                        }
+
+                        if (response.response.status >= 400) {
+                            this.error = '';
+                            return;
+                        }
+                    }
+
+                    // if (response.status === 204) {
                     localStorage.setItem('x_xsrf_token', response.config.headers['X-XSRF-TOKEN']);
                     this.$router.push({ name: 'account.profile' });
+                    // }
+
                 });
             });
         }

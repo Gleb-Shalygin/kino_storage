@@ -26,9 +26,6 @@
 </template>
 
 <script>
-
-import router from "../../../router/routes.js";
-
 export default {
     data() {
         return {
@@ -44,18 +41,27 @@ export default {
                     axios.post('/login', {
                         email: this.email, password: this.password
                     }).then((response) => {
-                        if (response.response.status === 422 || response.response.status === 401 || response.response.status === 419) {
-                            this.error = response.response.data.message;
-                            return;
+                        if (response.response) {
+                            if (response.response.status === 422) {
+                                this.error = response.response.data.message;
+                                return;
+                            }
+
+                            if (response.response.status === 401 || response.response.status === 419) {
+                                this.error = response.response.data.message;
+                                return;
+                            }
+
+                            if (response.response.status >= 400) {
+                                this.error = '';
+                                return;
+                            }
                         }
 
-                        // if (response.response.status === 403) {
-                        //     this.error = 'Не верный логин или пароль!'
-                        //     return;
-                        // }
-
-                        localStorage.setItem('x_xsrf_token', response.config.headers['X-XSRF-TOKEN']);
-                        this.$router.push({ name: 'account.profile' });
+                        if (response.status === 204) {
+                            localStorage.setItem('x_xsrf_token', response.config.headers['X-XSRF-TOKEN']);
+                            this.$router.push({ name: 'account.profile' });
+                        }
                     });
             });
         },
